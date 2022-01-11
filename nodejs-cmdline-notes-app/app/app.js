@@ -61,7 +61,7 @@ yargs.command({
         });
         
         writeToDB(data);
-        console.log("Added to DB successfully");
+        console.log(chalk.green("New Note Created!"));
     }
 }).command({
     command: 'remove',
@@ -88,7 +88,7 @@ yargs.command({
         });
         
         writeToDB(data);
-        console.log("Removed from DB successfully");
+        console.log(chalk.green("Note Removed"));
     }
 }).command({
     command: 'list',
