@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Blog Ninja | <%= title %> </title>
 </head>
 <body>
+
+    <% const name = "amit" %> 
     
     <nav>
         <div class="site-title">
+            <p> <%= name %>  </p>
             <a href="/"><h1>Blog Ninjas</h1></a>
             <p>A Net Ninja Site</p>
         </div>
@@ -23,6 +26,17 @@
 
     <div class="blogs content">
         <h2>All Blogs</h2>
+
+        <% if (blogs.length > 0) { %> 
+            <% blogs.forEach(blog => { %>
+
+                <h3 class="title"><%= blog.title %></h3>
+                <p class="snippet"><%= blog.snippet %> </p>
+
+            <% }); %> 
+        <% } else { %> 
+            <p>There are no blogs to display</p>
+        <% } %> 
     </div>
 
 </body>
