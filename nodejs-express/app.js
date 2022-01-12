@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan = require('morgan');
 
 // express app
 const app = express();
@@ -8,6 +9,12 @@ app.listen(3000);
 
 // Register view engine: EJS. By default searches in the 'view' folder
 app.set('view engine', 'ejs');
+
+// Static middleware
+app.use(express.static('public'))
+
+// Logging middleware
+app.use(morgan('dev'));
 
 // Processes requests from the top to the bottom
 app.get("/", (req, res) => {
