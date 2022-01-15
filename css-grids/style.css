@@ -41,6 +41,16 @@ body {
   .three {
     grid-column: 1/4;
     grid-row: 2/4;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .three p {
+    border:   1px solid #fff;
+    margin: 0;
+    padding: 20px;
   }
 
   .four {
