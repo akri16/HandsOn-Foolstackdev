@@ -41,12 +41,12 @@ html, body{
       position: absolute;
       left: 0;
       top: -85px;
-      animation: drive 3s linear;
+      animation: drive 3s linear 1s normal forwards;
   }
 
   @keyframes drive {
       to {
-            transform : translate(800px)
+            transform : translate(500px)
       }
 
       from {
