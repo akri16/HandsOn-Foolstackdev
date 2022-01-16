@@ -41,16 +41,17 @@ html, body{
       position: absolute;
       left: 0;
       top: -85px;
-      animation: drive 3s linear 1s normal forwards;
+      animation: drive 3s linear 1s normal both;
+      animation-iteration-count: infinite;
   }
 
   @keyframes drive {
       to {
-            transform : translate(500px)
+            transform : translate(650px)
       }
 
       from {
-            transform: translate(0);
+            transform: translate(-200px);
       }
   }
 
