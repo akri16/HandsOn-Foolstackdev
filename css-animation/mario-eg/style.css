@@ -41,8 +41,7 @@ html, body{
       position: absolute;
       left: 0;
       top: -85px;
-      animation: drive 3s linear 1s normal both;
-      animation-iteration-count: infinite;
+      animation: drive 3s linear 1s infinite both, jump 0.5s 2.2s ease 1;
   }
 
   .luigi {
@@ -88,6 +87,20 @@ html, body{
 
       from {
         left: 100%;
+      }
+  }
+
+  @keyframes jump {
+      0% {
+          top: -85px;
+      }
+
+      50% {
+          top: -150px;
+      }
+
+      100% {
+          top: -85px;
       }
   }
 
